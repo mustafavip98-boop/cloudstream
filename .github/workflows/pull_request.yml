@@ -1,6 +1,8 @@
 name: Artifact Build
 
 on:
+  push:
+    branches: [ ciflix/rebrand ]
   pull_request:
   workflow_dispatch:
 
