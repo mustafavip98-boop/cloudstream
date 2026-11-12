@@ -16,6 +16,9 @@ concurrency:
 jobs:
   android:
     runs-on: ubuntu-latest
+    env:
+      ANDROID_HOME: /usr/local/lib/android/sdk
+      ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
     steps:
       - name: Checkout CifliX
         uses: actions/checkout@v6
@@ -26,11 +29,14 @@ jobs:
           distribution: temurin
           java-version: 17
 
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
-        with:
-          accept-android-sdk-licenses: true
-          packages: platforms;android-35,platform-tools
+      # Install SDK packages directly; avoid malformed package-list parsing.
+      - name: Install Android SDK packages
+        shell: bash
+        run: |
+          SDKMANAGER="$ANDROID_HOME/cmdline-tools/16.0/bin/sdkmanager"
+          test -x "$SDKMANAGER"
+          yes | "$SDKMANAGER" --sdk_root="$ANDROID_HOME" --licenses
+          "$SDKMANAGER" --sdk_root="$ANDROID_HOME" "platforms;android-35" "platform-tools"
 
       - name: Grant Gradle execute permission
         run: chmod +x ./gradlew
@@ -39,7 +45,7 @@ jobs:
         uses: gradle/actions/setup-gradle@v5
 
       - name: Build CifliX debug APK
-        run: ./gradlew assembleStableDebug lint
+        run: ./gradlew --no-daemon assembleStableDebug lint
 
       - name: Upload CifliX APK
         uses: actions/upload-artifact@v7
