@@ -31,7 +31,7 @@ jobs:
         with:
           accept-android-sdk-licenses: true
           packages: |
-            platforms;android-37
+            platforms;android-36
             platform-tools
 
       - name: Grant Gradle execute permission
