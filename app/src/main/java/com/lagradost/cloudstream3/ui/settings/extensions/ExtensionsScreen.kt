@@ -1,5 +1,3 @@
-@file:OptIn(androidx.compose.material3.ExperimentalMaterial3Api::class)
-
 package com.lagradost.cloudstream3.ui.settings.extensions
 
 import android.annotation.SuppressLint
@@ -1295,14 +1293,14 @@ object ExtensionsScreen : Screen {
                                     status.progress.toFloat() / total.toFloat()
                                 },
                                 modifier = Modifier
-                                    .size(IconButtonDefaults.smallContainerSize())
+                                    .size(40.dp)
                                     .padding(MaterialTheme.padding.small),
                                 color = MaterialTheme.colorScheme.onBackground,
                             )
                         } else {
                             CircularProgressIndicator(
                                 modifier = Modifier
-                                    .size(IconButtonDefaults.smallContainerSize())
+                                    .size(40.dp)
                                     .padding(MaterialTheme.padding.small),
                                 color = MaterialTheme.colorScheme.onBackground,
                             )
@@ -1876,7 +1874,7 @@ object ExtensionsScreen : Screen {
                             )
                             /*CircularProgressIndicator(
                                 modifier = Modifier
-                                    .size(IconButtonDefaults.smallContainerSize())
+                                    .size(40.dp)
                                     .padding(MaterialTheme.padding.small),
                                 color = MaterialTheme.colorScheme.onBackground,
                             )*/
