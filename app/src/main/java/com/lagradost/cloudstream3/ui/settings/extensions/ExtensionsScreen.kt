@@ -1,3 +1,5 @@
+@file:OptIn(androidx.compose.material3.ExperimentalMaterial3Api::class)
+
 package com.lagradost.cloudstream3.ui.settings.extensions
 
 import android.annotation.SuppressLint
