@@ -105,7 +105,7 @@
             android:resizeableActivity="true"
             android:screenOrientation="userLandscape"
             android:supportsPictureInPicture="true"
-            android:taskAffinity="com.lagradost.cloudstream3.downloadedplayer"
+            android:taskAffinity="com.ciflix.app.downloadedplayer"
             android:launchMode="singleTask"
             tools:ignore="DiscouragedApi">
             <intent-filter>
@@ -182,7 +182,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="cloudstreamplayer" />
+                <data android:scheme="cloudstreamplayer"
+                <data scheme="ciflixplayer" /> />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -190,7 +191,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="cloudstreamapp" />
+                <data android:scheme="cloudstreamapp"
+                <data scheme="ciflixapp" /> />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -198,7 +200,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="cloudstreamrepo" />
+                <data android:scheme="cloudstreamrepo"
+                <data scheme="ciflixrepo" /> />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -215,7 +218,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="cloudstreamsearch" />
+                <data android:scheme="cloudstreamsearch"
+                <data scheme="ciflixsearch" /> />
             </intent-filter>
 
             <!--
@@ -228,7 +232,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="cloudstreamcontinuewatching" />
+                <data android:scheme="cloudstreamcontinuewatching"
+                <data scheme="ciflixcontinuewatching" /> />
             </intent-filter>
 
             <intent-filter android:autoVerify="false">
