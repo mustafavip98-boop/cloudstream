@@ -51,7 +51,7 @@ jobs:
             echo "Android SDK license acceptance failed with exit code $sdk_status"
             exit "$sdk_status"
           fi
-          "$SDKMANAGER" --sdk_root="$ANDROID_HOME" "platforms;android-35" "platform-tools"
+          "$SDKMANAGER" --sdk_root="$ANDROID_HOME" "platforms;android-37" "platform-tools"
 
       - name: Grant Gradle execute permission
         run: chmod +x ./gradlew
