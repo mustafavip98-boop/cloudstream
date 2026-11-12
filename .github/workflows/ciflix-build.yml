@@ -43,7 +43,14 @@ jobs:
             exit 1
           fi
           echo "Using SDK manager: $SDKMANAGER"
+          set +o pipefail
           yes | "$SDKMANAGER" --sdk_root="$ANDROID_HOME" --licenses
+          sdk_status=${PIPESTATUS[1]}
+          set -o pipefail
+          if [ "$sdk_status" -ne 0 ]; then
+            echo "Android SDK license acceptance failed with exit code $sdk_status"
+            exit "$sdk_status"
+          fi
           "$SDKMANAGER" --sdk_root="$ANDROID_HOME" "platforms;android-35" "platform-tools"
 
       - name: Grant Gradle execute permission
