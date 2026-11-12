@@ -182,7 +182,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="cloudstreamplayer"
+                <data android:scheme="cloudstreamplayer" />
                 <data android:scheme="ciflixplayer" />
             </intent-filter>
             <intent-filter>
@@ -191,7 +191,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="cloudstreamapp"
+                <data android:scheme="cloudstreamapp" />
                 <data android:scheme="ciflixapp" />
             </intent-filter>
             <intent-filter>
@@ -200,7 +200,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="cloudstreamrepo"
+                <data android:scheme="cloudstreamrepo" />
                 <data android:scheme="ciflixrepo" />
             </intent-filter>
             <intent-filter>
@@ -218,7 +218,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="cloudstreamsearch"
+                <data android:scheme="cloudstreamsearch" />
                 <data android:scheme="ciflixsearch" />
             </intent-filter>
 
@@ -232,7 +232,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="cloudstreamcontinuewatching"
+                <data android:scheme="cloudstreamcontinuewatching" />
                 <data android:scheme="ciflixcontinuewatching" />
             </intent-filter>
 
